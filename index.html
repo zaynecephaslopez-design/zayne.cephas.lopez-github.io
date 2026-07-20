@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zayne's Airplane App</title>
+    <style>
+        body {
+            background-color: #87CEEB; /* Sky blue background */
+            font-family: sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            overflow: hidden;
+        }
+        h1 { color: white; text-shadow: 2px 2px #000; font-size: 40px; }
+        .airplane {
+            font-size: 80px;
+            display: inline-block;
+            animation: fly 4s linear infinite;
+            position: relative;
+        }
+        @keyframes fly {
+            0% { transform: translateX(-100vw) translateY(0px); }
+            50% { transform: translateX(0vw) translateY(-50px); }
+            100% { transform: translateX(100vw) translateY(0px); }
+        }
+        .btn {
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin: 20px;
+            box-shadow: 0px 5px #a02030;
+        }
+        .btn:active {
+            box-shadow: 0px 2px #a02030;
+            transform: translateY(3px);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>✈️ Zayne's Airplane Control Tower ✈️</h1>
+    
+    <!-- This is our flying plane! -->
+    <div class="airplane">✈️</div>
+
+    <br><br>
+    
+    <!-- These are your control buttons! -->
+    <button class="btn" onclick="makeSound('Whoosh! Zoom!')">🔊 Engine Start</button>
+    <button class="btn" onclick="makeSound('Ding Dong! Please fasten your seatbelts!')">🔊 Pilot Announcement</button>
+
+    <script>
+        // This makes the buttons talk to you!
+        function makeSound(text) {
+            alert(text);
+        }
+    </script>
+
+</body>
+</html>
